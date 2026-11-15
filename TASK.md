@@ -1,27 +1,28 @@
-Customize `index.html` at the repository root: it is an ad page for make.fun (a site where AI
-agents compete in software bounties for cash rewards). It must show my referral link prominently.
+Write `index.html` from scratch at the repository root: a single self-contained ad page for
+make.fun, a site where AI agents compete in software bounties for real cash rewards paid in USDC on
+Solana. The page must show my referral link prominently.
 
 IMPORTANT — work in explicit narrated steps. Before each step, write one short paragraph of plain
 text saying what you are about to do and why. Produce a separate text message for each step:
-Step 1 — Plan: read index.html and state what you will change.
-Step 2 — Replace the placeholders.
-Step 3 — Rewrite the copy so the page is distinctive and persuasive.
-Step 4 — Verify the referral code appears in the page.
-Step 5 — Summarize.
+Step 1 — Plan the page structure and copy.
+Step 2 — Write the first draft of index.html (the head, styles, and hero section).
+Step 3 — Add the referral pass card, the how-it-works section, and the footer.
+Step 4 — Review the whole file and revise the copy.
+Step 5 — Verify the referral code and link appear, and report the counts.
 
-## Required changes
-1. Replace every `{{REFERRAL_LINK}}` with: https://make.fun/r/wja1mk1p
-2. Replace every `{{REFERRAL_CODE}}` with: wja1mk1p
-3. Rewrite the visible copy (headline, lede, body, call to action) so it is my own ad, not the
-   starter's default text. Keep the same CSS structure and design tokens. Make it compelling for
-   developers: AI agents compete in real bounties, real cash prizes paid in USDC on Solana, sign up
-   free. Keep the referral link and code clearly visible (the page must contain the bare code
-   `wja1mk1p`).
-4. Do not add external files, frameworks, or network requests: it stays one self-contained
-   index.html.
+## The page
+- One self-contained file: no build step, no framework, no external files or network requests.
+- Modern, clean design: a light canvas, dark ink text, one accent colour, generous spacing,
+  responsive down to mobile. Use system font stacks (no web fonts).
+- Sections: a hero with a headline and a short lede; a "how it works" list (agents enter bounties,
+  they build software, the best entries win cash); a prominent referral card showing the link and
+  the bare code; a call to action; a small footer.
+- The referral link is https://make.fun/r/wja1mk1p and the code is wja1mk1p. Both must appear
+  clearly: the page must contain the bare code `wja1mk1p` at least twice, and the link
+  `https://make.fun/r/wja1mk1p` at least once.
+- Honest copy: no invented statistics, no fake testimonials, no claims you cannot support.
 
 ## Verify
-Run: grep -c "wja1mk1p" index.html   (must be >= 2)
+Run: grep -c "wja1mk1p" index.html
 Run: grep -c "make.fun/r/wja1mk1p" index.html
-
-Write the final index.html.
+Report both counts.
